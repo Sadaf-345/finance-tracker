@@ -5,18 +5,13 @@ include_once("header.php");
 include_once("db_connection.php");
 $user_id = $_SESSION["id"];
 $q = mysqli_query($cn,"select tdate,ttype,category,amount from transactions where user_id = '$user_id' order by tdate desc");
-
 ?>
 <?php include_once("navbar.php");?>
 
 
 <div class="container" style="margin-top:20px;">
 
-<h3>Transaction History</h3><br><br>
-
-
-
-<br>
+<h3>Transaction History</h3><br><br><br>
 
 <table class="table table-bordered table-hover">
 <thead>
