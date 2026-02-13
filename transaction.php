@@ -4,7 +4,7 @@ include_once("sessioncheck.php");
 include_once("header.php");
 include_once("db_connection.php");
 $user_id = $_SESSION["id"];
-$q = mysqli_query($cn,"select tdate,ttype,category,amount from transactions order by tdate desc");
+$q = mysqli_query($cn,"select tdate,ttype,category,amount from transactions where user_id = '$user_id' order by tdate desc");
 
 ?>
 <?php include_once("navbar.php");?>
